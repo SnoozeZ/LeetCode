@@ -7,7 +7,7 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution {
+class Solution { //O(N), 0ms. Ugly code.
 public:
     vector<int> postorderTraversal(TreeNode* root) {
         vector<int> result;
