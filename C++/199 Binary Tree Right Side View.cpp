@@ -25,8 +25,6 @@ public:
 			if(curNode == lastNode){
 				result.push_back(lastNode->val);
 				lastNode = toVisit.back();
-				if(curNode->left) lastNode = curNode->left;
-				if(curNode->right) lastNode = curNode->right;
 			}
 		}
 		return result;

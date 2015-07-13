@@ -29,8 +29,6 @@ public:
 			
 			if(curNode == lastNode){//last node of this level
 				lastNode = toVisit.back();
-				if(curNode->left) lastNode = curNode->left;
-				if(curNode->right) lastNode = curNode->right;
 				if(rFlag) std::reverse(tmpVector.begin(), tmpVector.end());
 				result.push_back(vector<int> (tmpVector));
 				tmpVector.clear();
