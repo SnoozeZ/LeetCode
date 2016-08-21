@@ -31,6 +31,29 @@ public:
         return;
     }
 };
-
+// class Solution {
+// public:
+//     vector<vector<int>> combine(int n, int k) {
+//         vector<vector<int>> result;
+//         vector<int> cur;
+//         dfs(result, n, 1, cur, k);
+//         return result;
+//     }
+    
+//     void dfs(vector<vector<int>>& result, int n, int pos, vector<int> cur, int k) {
+//         if(cur.size() + n - pos +1 < k) return; // prune.
+//         if(cur.size() == k) {
+//             result.push_back(cur);
+//             return;
+//         }
+        
+//         for(int i = pos; i <= n; i++) {
+//             vector<int> tmp(cur);
+//             tmp.push_back(i);
+//             dfs(result, n, i+1, tmp, k);
+//         }
+//         return;
+//     }
+// };
 
 
