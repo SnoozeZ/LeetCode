@@ -1,3 +1,4 @@
+// If the char count == 1, we can't pop any more.
 class Solution {
 public:
     string removeDuplicateLetters(string s) {

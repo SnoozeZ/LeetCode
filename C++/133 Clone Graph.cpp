@@ -39,3 +39,38 @@ public:
         return peer[node];
     }
 };
+
+// /**
+//  * Definition for undirected graph.
+//  * struct UndirectedGraphNode {
+//  *     int label;
+//  *     vector<UndirectedGraphNode *> neighbors;
+//  *     UndirectedGraphNode(int x) : label(x) {};
+//  * };
+//  */
+// class Solution {
+// public:
+//     UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {
+//         if(!node) return node;
+//         unordered_map<UndirectedGraphNode *, UndirectedGraphNode *> map;
+//         queue<UndirectedGraphNode *> toBuild;
+        
+//         UndirectedGraphNode *res = new UndirectedGraphNode(node->label);
+//         map[node] = res;
+//         toBuild.push(node);
+        
+//         while(!toBuild.empty()) {
+//             UndirectedGraphNode *cur = toBuild.front();
+//             toBuild.pop();
+//             for(auto nbr : cur->neighbors) {
+//                 if(map[nbr] == NULL) {
+//                     map[nbr] = new UndirectedGraphNode(nbr->label);
+//                     toBuild.push(nbr);
+//                 }
+//                 map[cur]->neighbors.push_back(map[nbr]);
+//             }
+//         }
+        
+//         return res;
+//     }
+// };
