@@ -8,6 +8,8 @@ public:
     MyTreeNode(int v) {
         val = v;
         count = 0;
+        left = NULL;
+        right = NULL;
     }
 };
 

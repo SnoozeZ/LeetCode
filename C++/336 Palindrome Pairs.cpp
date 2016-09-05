@@ -15,8 +15,8 @@ public:
             int size = word.size();
             // find every substring
             for (int j = 0; j <= word.size(); j++) {
-                string leftSubString = word.substr(0, j);
-                string rightSubString = word.substr(j, size-j);
+                string leftSubString = word.substr(0, j);       // Here is interesting.
+                string rightSubString = word.substr(j, size-j); // Same as above.
                 // cat back
                 if(isPalindrome(rightSubString)) {
                     string tmp = leftSubString;
