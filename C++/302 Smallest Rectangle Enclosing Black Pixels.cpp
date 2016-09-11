@@ -28,3 +28,30 @@ public:
     }
     
 };
+
+/*class Solution {
+public:
+    int minArea(vector<vector<char>>& image, int x, int y) {
+        vector<int> boundry({INT_MAX, INT_MAX, INT_MIN, INT_MIN});    // x1, y1, x2, y2.
+        helper(image, x, y, boundry);
+        return (boundry[2] - boundry[0] + 1) * (boundry[3] - boundry[1] + 1);
+    }
+    
+    void helper(vector<vector<char>>& image, int x, int y, vector<int>& boundry) {
+        if( x < 0 || x >= image.size() || y < 0 || y >= image[0].size() || image[x][y]!='1') {
+            return;
+        }
+        image[x][y] = '0'; // Mark as visited.
+        // Update boundry.
+        boundry[0] = min(boundry[0], x);
+        boundry[1] = min(boundry[1], y);
+        boundry[2] = max(boundry[2], x);
+        boundry[3] = max(boundry[3], y);
+        
+        // Do DFS.
+        helper(image, x+1, y, boundry);
+        helper(image, x-1, y, boundry);
+        helper(image, x, y+1, boundry);
+        helper(image, x, y-1, boundry);
+    }
+};*/

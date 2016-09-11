@@ -110,4 +110,33 @@ public:
     }
 };
 
-
+/*
+class Solution {
+public:
+    bool validTree(int n, vector<pair<int, int>>& edges) {
+        unordered_map<int, unordered_set<int>> nbr;
+        unordered_set<int> visited;
+        for(auto edge : edges) {
+            nbr[edge.first].insert(edge.second);
+            nbr[edge.second].insert(edge.first);
+        }
+        
+        // DFS
+        if (dfs(nbr, visited, 0) == false) 
+            return false;
+        else 
+            return visited.size() == n;
+        
+    }
+    
+    bool dfs(unordered_map<int, unordered_set<int>>& nbr, unordered_set<int>& visited, int cur) {
+        if(visited.count(cur)) return false;
+        visited.insert(cur);
+        for(int next : nbr[cur]) {
+            nbr[next].erase(cur);
+            if(!dfs(nbr, visited, next)) return false;
+        }
+        return true;
+    }
+};
+*/

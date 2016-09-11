@@ -17,3 +17,24 @@ public:
         
     }
 };
+
+/*
+class Solution {
+public:
+    vector<string> summaryRanges(vector<int>& nums) {
+        vector<string> result;
+        int left=0, right=0;
+        for(; right < nums.size(); right++) {
+            if(right==nums.size()-1 || nums[right] != nums[right+1]-1) {
+                // Summary.
+                if(left == right) result.push_back(to_string(nums[left]));
+                else result.push_back(to_string(nums[left]) + "->" + to_string(nums[right]));
+                left = right + 1;
+            } else {
+                // Do nothing.
+            }
+        }
+        return result;
+    }
+};
+*/

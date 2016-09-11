@@ -26,3 +26,26 @@ public:
         return s;
     }
 };
+
+/*
+class Solution {
+public:
+    vector<string> generatePossibleNextMoves(string s) {
+        vector<string> rlt;
+        if(s=="") return rlt;
+        for(int i = 0; i < s.size()-1; i++){
+            if(s[i] == '+' && s[i] == s[i+1]){
+                rlt.push_back(flip(s, i));
+            }
+        }
+        return rlt;
+    }
+    
+    string flip(string ss, int pos){
+        string s = ss;
+        s[pos++] = '-';
+        s[pos] = '-'; 
+        return s;
+    }
+};
+*/

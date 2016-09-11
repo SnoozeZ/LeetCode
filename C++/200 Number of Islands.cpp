@@ -28,3 +28,34 @@ public:
         dfs(i, j-1, grid, searched);
     }
 };
+
+
+/*
+class Solution {
+public:
+    int numIslands(vector<vector<char>>& grid) {
+        if(grid.empty()) return 0;
+        int m = grid.size(), n = grid[0].size();
+        vector<vector<bool>> visited(m, vector<bool>(n));
+        int result;
+        for(int i=0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                if(grid[i][j] == '1' && !visited[i][j]) result++;
+                markVisited(grid, i, j, visited);
+            }
+        }
+        return result;
+    }
+    
+    void markVisited(vector<vector<char>>& grid, int i, int j, vector<vector<bool>>& visited) {
+        if(i<0 || j<0 || i>=grid.size() || j>=grid[0].size() || visited[i][j] || grid[i][j]!='1') {
+            return;
+        }
+        visited[i][j] = true;
+        markVisited(grid, i+1, j, visited);
+        markVisited(grid, i-1, j, visited);
+        markVisited(grid, i, j+1, visited);
+        markVisited(grid, i, j-1, visited);
+    }
+};
+*/

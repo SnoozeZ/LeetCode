@@ -35,3 +35,33 @@ public:
         }
     }
 };
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+ /*
+class Solution {
+public:
+    int longestConsecutive(TreeNode* root) {
+        if(!root) return 0;
+        int result=0;
+        dfs(root, result, 1);
+        return result;
+    }
+    
+    void dfs(TreeNode *root, int &result, int cur) {
+        if(cur > result) result = cur;
+        if(root->left) {
+            dfs(root->left, result, (root->val+1 == root->left->val) ? cur+1 : 1);
+        }
+        if(root->right) {
+            dfs(root->right, result, (root->val+1 == root->right->val) ? cur+1 : 1);
+        }
+    }
+};*/
